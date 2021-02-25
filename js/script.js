@@ -1,3 +1,8 @@
 var surname = prompt("Inserisci il tuo nome"), name = prompt("Inserisci il tuo cognnome"), favcolor = prompt("Inserisci il tuo colore preferito");
 
-document.getElementById('password').innerHTML = "La tua password è: " + surname + name + favcolor + "27";
+var control = confirm("I dati inseriti sono corretti?\n" + surname + name + favcolor);
+if (control == true) {
+  document.getElementById('password').innerHTML = "La tua password è: " + surname + name + favcolor + "27";
+} else {
+  alert("Ricarica la pagina");
+}
